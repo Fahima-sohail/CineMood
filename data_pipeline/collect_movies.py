@@ -77,6 +77,22 @@ COVERAGE_ANCHORS = [
     SeedMovie("Spirited Away", 2001),
     SeedMovie("Mad Max: Fury Road", 2015),
     SeedMovie("The Grand Budapest Hotel", 2014),
+    # Twist, perception, and coming-of-age coverage anchors. Inception and
+    # Catch Me If You Can are already in the seed-expanded corpus.
+    SeedMovie("Fight Club", 1999),
+    SeedMovie("Parasite", 2019),
+    SeedMovie("The Sixth Sense", 1999),
+    SeedMovie("Shutter Island", 2010),
+    SeedMovie("Gone Girl", 2014),
+    SeedMovie("10 Things I Hate About You", 1999),
+    SeedMovie("The Truman Show", 1998),
+    SeedMovie("Good Will Hunting", 1997),
+    SeedMovie("Dead Poets Society", 1989),
+    SeedMovie("The Perks of Being a Wallflower", 2012),
+    SeedMovie("Titanic", 1997),
+    SeedMovie("Mr. & Mrs. Smith", 2005),
+    SeedMovie("Memento", 2000),
+    SeedMovie("12 Angry Men", 1957),
 ]
 
 
@@ -95,11 +111,20 @@ def load_json(path: Path, default: Any) -> Any:
 def write_json(path: Path, payload: Any) -> None:
     """Atomically write JSON so Ctrl+C cannot leave a broken resume file."""
     path.parent.mkdir(parents=True, exist_ok=True)
-    temporary = path.with_suffix(f"{path.suffix}.tmp")
+    # A process-specific temporary name avoids collisions after an interrupted
+    # collection run is still unwinding in another terminal.
+    temporary = path.with_name(f"{path.name}.{os.getpid()}.tmp")
     with temporary.open("w", encoding="utf-8") as file:
         json.dump(payload, file, indent=2, ensure_ascii=False)
         file.write("\n")
-    temporary.replace(path)
+    for attempt in range(5):
+        try:
+            temporary.replace(path)
+            return
+        except PermissionError:
+            if attempt == 4:
+                raise
+            time.sleep(.25 * (attempt + 1))
 
 
 def normalize_title(value: str) -> str:
@@ -268,6 +293,12 @@ def format_reviews(client: TMDbClient, movie_id: int) -> list[dict[str, str | fl
     return [{"author": review.get("author", "TMDb user"), "rating": review.get("author_details", {}).get("rating"), "content": clean_text(review.get("content"), limit=1200)} for review in reviews[:5] if clean_text(review.get("content"))]
 
 
+def fetch_keywords(client: TMDbClient, movie_id: int) -> list[str]:
+    """Fetch TMDb's spoiler-light editorial keyword vocabulary for hybrid search."""
+    response = client.get(f"/movie/{movie_id}/keywords")
+    return [clean_text(keyword.get("name")) for keyword in response.get("keywords", []) if clean_text(keyword.get("name"))]
+
+
 def meets_quality_threshold(movie: dict[str, Any], min_vote_average: float, min_vote_count: int) -> bool:
     """Use the same visible TMDb rating data for old and newly fetched records."""
     return float(movie.get("vote_average") or 0) >= min_vote_average and int(movie.get("vote_count") or 0) >= min_vote_count
@@ -285,7 +316,19 @@ def build_movie_record(
         return None
     reviews = format_reviews(client, movie_id)
     overview = clean_text(details.get("overview"))
-    return {"tmdb_id": int(details["id"]), "title": details.get("title") or details.get("original_title") or "Untitled", "year": year_from_date(details.get("release_date")), "genres": [genre["name"] for genre in details.get("genres", []) if genre.get("name")], "runtime": details.get("runtime"), "overview": overview, "poster_path": details.get("poster_path"), "vote_average": details.get("vote_average"), "vote_count": details.get("vote_count"), "reviews": reviews, "combined_text": "\n\n".join(part for part in [overview, *(review["content"] for review in reviews)] if part), "is_seed": is_seed, "collected_at": datetime.now(timezone.utc).isoformat()}
+    return {"tmdb_id": int(details["id"]), "title": details.get("title") or details.get("original_title") or "Untitled", "year": year_from_date(details.get("release_date")), "genres": [genre["name"] for genre in details.get("genres", []) if genre.get("name")], "runtime": details.get("runtime"), "overview": overview, "poster_path": details.get("poster_path"), "vote_average": details.get("vote_average"), "vote_count": details.get("vote_count"), "keywords": fetch_keywords(client, movie_id), "reviews": reviews, "combined_text": "\n\n".join(part for part in [overview, *(review["content"] for review in reviews)] if part), "is_seed": is_seed, "collected_at": datetime.now(timezone.utc).isoformat()}
+
+
+def refresh_keywords(client: TMDbClient, movies_by_id: dict[int, dict[str, Any]]) -> None:
+    """Backfill old records once, then reuse the persisted keyword list on reruns."""
+    missing = [movie for movie in movies_by_id.values() if "keywords" not in movie]
+    if not missing:
+        return
+    print(f"Fetching TMDb keywords for {len(missing)} existing movie record(s)…")
+    for index, movie in enumerate(missing, start=1):
+        movie["keywords"] = fetch_keywords(client, int(movie["tmdb_id"]))
+        write_json(OUTPUT_FILE, list(movies_by_id.values()))
+        print(console_safe(f"Keywords {index:03d}/{len(missing)}: {movie['title']}"))
 
 
 def print_summary(movies: list[dict[str, Any]], failed_seeds: list[str]) -> None:
@@ -303,7 +346,7 @@ def print_summary(movies: list[dict[str, Any]], failed_seeds: list[str]) -> None
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="Collect CineMood's seed-guided TMDb movie dataset.")
-    parser.add_argument("--target", type=int, default=310, help="Maximum movies to save (default: 310).")
+    parser.add_argument("--target", type=int, default=324, help="Maximum movies to save (default: 324).")
     parser.add_argument("--delay", type=float, default=0.12, help="Minimum seconds between TMDb calls (default: 0.12).")
     parser.add_argument("--candidate-pages", type=int, default=2, help="Pages from each similar/recommendations endpoint (default: 2).")
     parser.add_argument("--min-vote-average", type=float, default=DEFAULT_MIN_VOTE_AVERAGE, help="Minimum TMDb rating for every record (default: 6.5).")
@@ -350,6 +393,9 @@ def main() -> int:
         saved_by_id[movie_id] = record
         write_json(OUTPUT_FILE, list(saved_by_id.values()))
         print(console_safe(f"Saved {len(saved_by_id):03d}/{args.target}: {record['title']} ({record['year']})"))
+    movies = list(saved_by_id.values())[:args.target]
+    write_json(OUTPUT_FILE, movies)
+    refresh_keywords(client, saved_by_id)
     movies = list(saved_by_id.values())[:args.target]
     write_json(OUTPUT_FILE, movies)
     print_summary(movies, failed_seeds)

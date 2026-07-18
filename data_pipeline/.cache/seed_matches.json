@@ -547,5 +547,288 @@
     "video": false,
     "vote_average": 8.027,
     "vote_count": 16222
+  },
+  "anchor|Fight Club|1999": {
+    "adult": false,
+    "backdrop_path": "/c6OLXfKAk5BKeR6broC8pYiCquX.jpg",
+    "genre_ids": [
+      18,
+      53
+    ],
+    "id": 550,
+    "title": "Fight Club",
+    "original_language": "en",
+    "original_title": "Fight Club",
+    "overview": "A ticking-time-bomb insomniac and a slippery soap salesman channel primal male aggression into a shocking new form of therapy. Their concept catches on, with underground \"fight clubs\" forming in every town, until an eccentric gets in the way and ignites an out-of-control spiral toward oblivion.",
+    "popularity": 25.966,
+    "poster_path": "/jSziioSwPVrOy9Yow3XhWIBDjq1.jpg",
+    "release_date": "1999-10-15",
+    "softcore": false,
+    "video": false,
+    "vote_average": 8.438,
+    "vote_count": 32357
+  },
+  "anchor|Parasite|2019": {
+    "adult": false,
+    "backdrop_path": "/hiKmpZMGZsrkA3cdce8a7Dpos1j.jpg",
+    "genre_ids": [
+      35,
+      53,
+      18
+    ],
+    "id": 496243,
+    "title": "Parasite",
+    "original_language": "ko",
+    "original_title": "기생충",
+    "overview": "All unemployed, Ki-taek's family takes peculiar interest in the wealthy and glamorous Parks for their livelihood until they get entangled in an unexpected incident.",
+    "popularity": 27.1383,
+    "poster_path": "/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg",
+    "release_date": "2019-05-30",
+    "softcore": false,
+    "video": false,
+    "vote_average": 8.492,
+    "vote_count": 20880
+  },
+  "anchor|The Sixth Sense|1999": {
+    "adult": false,
+    "backdrop_path": "/6TjllWT3cGrPFyqDXurVZ3L8bBi.jpg",
+    "genre_ids": [
+      9648,
+      53,
+      18
+    ],
+    "id": 745,
+    "title": "The Sixth Sense",
+    "original_language": "en",
+    "original_title": "The Sixth Sense",
+    "overview": "Following an unexpected tragedy, child psychologist Malcolm Crowe meets a nine year old boy named Cole Sear, who is hiding a dark secret.",
+    "popularity": 9.2941,
+    "poster_path": "/vOyfUXNFSnaTk7Vk5AjpsKTUWsu.jpg",
+    "release_date": "1999-08-06",
+    "softcore": false,
+    "video": false,
+    "vote_average": 7.955,
+    "vote_count": 12995
+  },
+  "anchor|Shutter Island|2010": {
+    "adult": false,
+    "backdrop_path": "/rbZvGN1A1QyZuoKzhCw8QPmf2q0.jpg",
+    "genre_ids": [
+      18,
+      53,
+      9648
+    ],
+    "id": 11324,
+    "title": "Shutter Island",
+    "original_language": "en",
+    "original_title": "Shutter Island",
+    "overview": "World War II soldier-turned-U.S. Marshal Teddy Daniels investigates the disappearance of a patient from a hospital for the criminally insane, but his efforts are compromised by troubling visions and a mysterious doctor.",
+    "popularity": 15.0685,
+    "poster_path": "/nrmXQ0zcZUL8jFLrakWc90IR8z9.jpg",
+    "release_date": "2010-02-14",
+    "softcore": false,
+    "video": false,
+    "vote_average": 8.198,
+    "vote_count": 26044
+  },
+  "anchor|Gone Girl|2014": {
+    "adult": false,
+    "backdrop_path": "/iWak7wT0j6ycCc8lKr4NBz9c7n5.jpg",
+    "genre_ids": [
+      9648,
+      53,
+      18
+    ],
+    "id": 210577,
+    "title": "Gone Girl",
+    "original_language": "en",
+    "original_title": "Gone Girl",
+    "overview": "With his wife's disappearance having become the focus of an intense media circus, a man sees the spotlight turned on him when it's suspected that he may not be innocent.",
+    "popularity": 14.988,
+    "poster_path": "/ts996lKsxvjkO2yiYG0ht4qAicO.jpg",
+    "release_date": "2014-10-01",
+    "softcore": false,
+    "video": false,
+    "vote_average": 7.891,
+    "vote_count": 20109
+  },
+  "anchor|10 Things I Hate About You|1999": {
+    "adult": false,
+    "backdrop_path": "/yvPbncYhMu9FfTjDhq0N5lgnVkO.jpg",
+    "genre_ids": [
+      35,
+      10749,
+      18
+    ],
+    "id": 4951,
+    "title": "10 Things I Hate About You",
+    "original_language": "en",
+    "original_title": "10 Things I Hate About You",
+    "overview": "On the first day at his new school, Cameron instantly falls for Bianca, the gorgeous girl of his dreams. The only problem is that Bianca is forbidden to date until her ill-tempered, completely un-dateable older sister Kat goes out, too. In an attempt to solve his problem, Cameron singles out the only guy who could possibly be a match for Kat: a mysterious bad boy with a nasty reputation of his own.",
+    "popularity": 13.2872,
+    "poster_path": "/ujERk3aKABXU3NDXOAxEQYTHe9A.jpg",
+    "release_date": "1999-03-30",
+    "softcore": false,
+    "video": false,
+    "vote_average": 7.596,
+    "vote_count": 9007
+  },
+  "anchor|The Truman Show|1998": {
+    "adult": false,
+    "backdrop_path": "/aCHn2TXYJfzPXQKA6r9mKPbMlUB.jpg",
+    "genre_ids": [
+      35,
+      18
+    ],
+    "id": 37165,
+    "title": "The Truman Show",
+    "original_language": "en",
+    "original_title": "The Truman Show",
+    "overview": "In a picture-perfect seaside town, an insurance salesman begins to realize that his entire existence may be staged and observed by a vast unseen audience as part of a long-running real-time reality TV show.",
+    "popularity": 13.798,
+    "poster_path": "/vuza0WqY239yBXOadKlGwJsZJFE.jpg",
+    "release_date": "1998-06-04",
+    "softcore": false,
+    "video": false,
+    "vote_average": 8.155,
+    "vote_count": 20446
+  },
+  "anchor|Good Will Hunting|1997": {
+    "adult": false,
+    "backdrop_path": "/xj1Sv1xm4Y0ydBueGuf10Y9qM0O.jpg",
+    "genre_ids": [
+      18
+    ],
+    "id": 489,
+    "title": "Good Will Hunting",
+    "original_language": "en",
+    "original_title": "Good Will Hunting",
+    "overview": "Will Hunting is a headstrong, working-class genius who is failing the lessons of life. After one too many run-ins with the law, Will's last chance is a psychology professor, who might be the only man who can reach him.",
+    "popularity": 13.0198,
+    "poster_path": "/z2FnLKpFi1HPO7BEJxdkv6hpJSU.jpg",
+    "release_date": "1997-12-05",
+    "softcore": false,
+    "video": false,
+    "vote_average": 8.163,
+    "vote_count": 13985
+  },
+  "anchor|Dead Poets Society|1989": {
+    "adult": false,
+    "backdrop_path": "/lFIXZpwwlF9hg8NM3RazaIJDuaj.jpg",
+    "genre_ids": [
+      18
+    ],
+    "id": 207,
+    "title": "Dead Poets Society",
+    "original_language": "en",
+    "original_title": "Dead Poets Society",
+    "overview": "At an elite, old-fashioned boarding school in New England, a passionate English teacher inspires his students to rebel against convention and seize the potential of every day, courting the disdain of the stern headmaster.",
+    "popularity": 13.8483,
+    "poster_path": "/erzbMlcNHOdx24AXOcn2ZKA7R1q.jpg",
+    "release_date": "1989-06-02",
+    "softcore": false,
+    "video": false,
+    "vote_average": 8.299,
+    "vote_count": 12720
+  },
+  "anchor|The Perks of Being a Wallflower|2012": {
+    "adult": false,
+    "backdrop_path": "/aM6E4DBP6588q3tEr9hz41ls80q.jpg",
+    "genre_ids": [
+      18
+    ],
+    "id": 84892,
+    "title": "The Perks of Being a Wallflower",
+    "original_language": "en",
+    "original_title": "The Perks of Being a Wallflower",
+    "overview": "Pittsburgh, Pennsylvania, 1991. High school freshman Charlie is a wallflower, always watching life from the sidelines, until two senior students, Sam and her stepbrother Patrick, become his mentors, helping him discover the joys of friendship, music and love.",
+    "popularity": 7.6943,
+    "poster_path": "/aKCvdFFF5n80P2VdS7d8YBwbCjh.jpg",
+    "release_date": "2012-09-20",
+    "softcore": false,
+    "video": false,
+    "vote_average": 7.805,
+    "vote_count": 11287
+  },
+  "anchor|Titanic|1997": {
+    "adult": false,
+    "backdrop_path": "/xnHVX37XZEp33hhCbYlQFq7ux1J.jpg",
+    "genre_ids": [
+      18,
+      10749
+    ],
+    "id": 597,
+    "title": "Titanic",
+    "original_language": "en",
+    "original_title": "Titanic",
+    "overview": "101-year-old Rose DeWitt Bukater tells the story of her life aboard the Titanic, 84 years later. A young Rose boards the ship with her mother and fiancé. Meanwhile, Jack Dawson and Fabrizio De Rossi win third-class tickets aboard the ship. Rose tells the whole story from Titanic's departure through to its death—on its first and last voyage—on April 15, 1912.",
+    "popularity": 25.7898,
+    "poster_path": "/9xjZS2rlVxm8SFx8kPC3aIGCOYQ.jpg",
+    "release_date": "1997-12-18",
+    "softcore": false,
+    "video": false,
+    "vote_average": 7.9,
+    "vote_count": 27357
+  },
+  "anchor|Mr. & Mrs. Smith|2005": {
+    "adult": false,
+    "backdrop_path": "/iFaWUETEE2umP1WY0LUAmjSpzm7.jpg",
+    "genre_ids": [
+      28,
+      35,
+      18,
+      53
+    ],
+    "id": 787,
+    "title": "Mr. & Mrs. Smith",
+    "original_language": "en",
+    "original_title": "Mr. & Mrs. Smith",
+    "overview": "A husband and wife struggle to keep their marriage alive until they realize they are both secretly working as assassins. Now, their respective assignments require them to kill each other.",
+    "popularity": 9.6964,
+    "poster_path": "/kjD700RtyhveN3ZbOnSvUSne0Qj.jpg",
+    "release_date": "2005-06-07",
+    "softcore": false,
+    "video": false,
+    "vote_average": 6.694,
+    "vote_count": 11313
+  },
+  "anchor|Memento|2000": {
+    "adult": false,
+    "backdrop_path": "/7Wev9JMo6R5XAfz2KDvXb7oPMmy.jpg",
+    "genre_ids": [
+      9648,
+      53
+    ],
+    "id": 77,
+    "title": "Memento",
+    "original_language": "en",
+    "original_title": "Memento",
+    "overview": "Leonard Shelby is tracking down the man who raped and murdered his wife. The difficulty of locating his wife's killer, however, is compounded by the fact that he suffers from a rare, untreatable form of short-term memory loss. Although he can recall details of life before his accident, Leonard cannot remember what happened fifteen minutes ago, where he's going, or why.",
+    "popularity": 15.7043,
+    "poster_path": "/nzlv62aC0octS5AklAiWpXLX9Z0.jpg",
+    "release_date": "2000-10-11",
+    "softcore": false,
+    "video": false,
+    "vote_average": 8.2,
+    "vote_count": 16404
+  },
+  "anchor|12 Angry Men|1957": {
+    "adult": false,
+    "backdrop_path": "/qqHQsStV6exghCM7zbObuYBiYxw.jpg",
+    "genre_ids": [
+      18
+    ],
+    "id": 389,
+    "title": "12 Angry Men",
+    "original_language": "en",
+    "original_title": "12 Angry Men",
+    "overview": "The defense and the prosecution have rested and the jury is filing into the jury room to decide if a young Spanish-American is guilty or innocent of murdering his father. What begins as an open and shut case soon becomes a mini-drama of each of the jurors' prejudices and preconceptions about the trial, the accused, and each other.",
+    "popularity": 18.385,
+    "poster_path": "/zhG3vKWyDRaZYoaww1UVAi29T9h.jpg",
+    "release_date": "1957-04-10",
+    "softcore": false,
+    "video": false,
+    "vote_average": 8.564,
+    "vote_count": 10123
   }
 }

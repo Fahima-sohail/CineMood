@@ -1,15 +1,20 @@
+import { expandQuery, rankMovieMatches } from './searchRanking'
+
 const DATA_URL = `${import.meta.env.BASE_URL}data/movies_data.json`
+const CURVES_URL = `${import.meta.env.BASE_URL}data/tension_curves.json`
+const SEARCH_CONFIG_URL = `${import.meta.env.BASE_URL}data/search_config.json`
 const TMDB_IMAGE_BASE = 'https://image.tmdb.org/t/p/w500'
 const MODEL_ID = 'Xenova/all-MiniLM-L6-v2'
 
 let datasetPromise
+let curvesPromise
+let configPromise
 let extractorPromise
 let transformersPromise
 
 function loadTransformersRuntime() {
   if (!transformersPromise) {
     transformersPromise = import('@xenova/transformers').then(({ env, pipeline }) => {
-      // Transformers.js stores downloaded model files in the browser cache.
       env.allowLocalModels = false
       env.useBrowserCache = true
       return pipeline
@@ -18,24 +23,38 @@ function loadTransformersRuntime() {
   return transformersPromise
 }
 
+function loadJson(url, errorMessage) {
+  return fetch(url).then((response) => {
+    if (!response.ok) throw new Error(`${errorMessage} (${response.status}).`)
+    return response.json()
+  })
+}
+
 function loadDataset() {
   if (!datasetPromise) {
-    datasetPromise = fetch(DATA_URL)
-      .then((response) => {
-        if (!response.ok) throw new Error(`Could not load static movie data (${response.status}).`)
-        return response.json()
-      })
-      .then((payload) => {
-        if (!payload.normalized || !Array.isArray(payload.movies)) throw new Error('Movie data is malformed or not normalized.')
-        return payload
-      })
+    datasetPromise = loadJson(DATA_URL, 'Could not load static movie data').then((payload) => {
+      if (!payload.normalized || !Array.isArray(payload.movies)) throw new Error('Movie data is malformed or not normalized.')
+      return payload
+    })
   }
   return datasetPromise
+}
+
+function loadCurves() {
+  if (!curvesPromise) curvesPromise = loadJson(CURVES_URL, 'Could not load emotional timelines')
+  return curvesPromise
+}
+
+function loadSearchConfig() {
+  if (!configPromise) configPromise = loadJson(SEARCH_CONFIG_URL, 'Could not load search calibration')
+  return configPromise
 }
 
 function loadExtractor(onProgress) {
   if (!extractorPromise) {
     extractorPromise = loadTransformersRuntime().then((pipeline) => pipeline('feature-extraction', MODEL_ID, {
+      // Match SentenceTransformer's fp32 output; the default quantized model drifted from the offline index.
+      quantized: false,
       progress_callback: (event) => onProgress?.({ phase: 'model', event }),
     }))
   }
@@ -47,28 +66,7 @@ function formatRuntime(minutes) {
   return `${Math.floor(minutes / 60)}h ${minutes % 60}m`
 }
 
-function curveForId(id) {
-  let state = Number(id) || 1
-  const random = () => { state = (state * 1664525 + 1013904223) % 4294967296; return state / 4294967296 }
-  let tension = 22 + random() * 22
-  return Array.from({ length: 16 }, (_, index) => {
-    tension += (random() - .4) * 22 + index * .55
-    tension = Math.max(13, Math.min(94, tension))
-    return Math.round(tension)
-  })
-}
-
-function confidenceFromScore(score) {
-  // Calibrated from the offline MiniLM validation: strong ≈ .45-.53, looser ≈ .27-.30.
-  const percentage = Math.round(Math.max(35, Math.min(98, 32 + (score - .15) * 160)))
-  if (score >= .45) return { percentage, label: 'Exceptional match' }
-  if (score >= .36) return { percentage, label: 'Strong match' }
-  if (score >= .28) return { percentage, label: 'Moderate match' }
-  return { percentage, label: 'Possible match' }
-}
-
-function decorateMovie(movie, score) {
-  const confidence = confidenceFromScore(score)
+function decorateMovie(movie, result, curveData, shouldShowEmpty) {
   const genres = movie.genres?.length ? movie.genres : ['Unclassified']
   return {
     id: String(movie.id),
@@ -82,33 +80,28 @@ function decorateMovie(movie, score) {
     voteAverage: movie.vote_average,
     voteCount: movie.vote_count,
     genres,
-    similarity: score,
-    match: confidence.percentage,
-    confidenceLabel: confidence.label,
-    reason: `Semantic similarity of ${score.toFixed(3)} across the film’s synopsis and audience response.`,
-    matchReasons: [`${confidence.label}`, `${movie.vote_average?.toFixed?.(1) ?? movie.vote_average}/10 TMDb rating`, genres.slice(0, 2).join(' + ')],
-    // The actual sentiment classifier has not been built. This deterministic
-    // curve preserves the UI while explicitly remaining a placeholder.
-    curve: curveForId(movie.id),
+    similarity: result.score,
+    contentSimilarity: result.contentScore,
+    keywordSimilarity: result.keywordScore,
+    match: result.confidence.percentage,
+    confidenceLabel: result.confidence.label,
+    shouldShowEmpty,
+    reason: `Hybrid similarity ${result.score.toFixed(3)}: semantic story cues plus TMDb keywords.`,
+    matchReasons: [result.confidence.label, `${movie.vote_average?.toFixed?.(1) ?? movie.vote_average}/10 TMDb rating`, genres.slice(0, 2).join(' + ')],
+    tensionCurve: curveData,
+    isApproximate: curveData?.is_approximate ?? true,
+    curve: curveData?.points?.map((point) => point.mood_score) ?? [30, 38, 48, 57, 45, 62, 54, 40],
   }
 }
 
-function dotProduct(left, right) {
-  let score = 0
-  for (let index = 0; index < left.length; index += 1) score += left[index] * right[index]
-  return score
-}
-
-/** Embed a query locally and rank the static corpus with cosine similarity. */
+/** Embed one locally expanded query, then rank the static corpus with the offline-calibrated hybrid scorer. */
 export async function searchMovies(query, { limit = 8, onProgress } = {}) {
   onProgress?.({ phase: 'data' })
-  const [dataset, extractor] = await Promise.all([loadDataset(), loadExtractor(onProgress)])
+  const [dataset, curves, config, extractor] = await Promise.all([loadDataset(), loadCurves(), loadSearchConfig(), loadExtractor(onProgress)])
   onProgress?.({ phase: 'embedding' })
-  const output = await extractor(query, { pooling: 'mean', normalize: true })
-  const queryVector = output.data
+  const output = await extractor(expandQuery(query, config), { pooling: 'mean', normalize: true })
   onProgress?.({ phase: 'comparing' })
-  const scored = dataset.movies.map((movie) => ({ movie, score: dotProduct(movie.embedding, queryVector) }))
-  scored.sort((left, right) => right.score - left.score)
+  const ranked = rankMovieMatches(query, output.data, dataset.movies, config, limit)
   onProgress?.({ phase: 'ranking' })
-  return scored.slice(0, limit).map(({ movie, score }) => decorateMovie(movie, score))
+  return ranked.matches.map((result) => decorateMovie(result.movie, result, curves[String(result.movie.id)], ranked.isEmpty))
 }

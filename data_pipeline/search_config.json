@@ -1,0 +1,22 @@
+{
+  "content_weight": 0.7,
+  "keyword_weight": 0.3,
+  "expansions": [
+    {"terms": ["nothing is what it seems", "twist"], "append": "psychological thriller mystery plot twist deception hidden truth distorted reality unexpected ending"},
+    {"terms": ["unreliable narrator"], "append": "psychological thriller unreliable narrator false memory amnesia paranoia distorted perception"},
+    {"terms": ["breakup", "getting over"], "append": "romantic comedy breakup healing moving on hopeful cute"},
+    {"all_terms": ["hopeful", "sad"], "append": "bittersweet grief hope emotional healing melancholy"},
+    {"terms": ["rich people", "wealthy", "privilege"], "append": "wealth privilege class satire rich family social status"},
+    {"all_terms": ["cozy", "cry"], "append": "comforting warm tender poignant tearjerker friendship love"},
+    {"all_terms": ["sick", "less alone"], "append": "comforting companionship friendship loneliness hopeful warmth"},
+    {"all_terms": ["long distance", "space"], "append": "romance across distance space travel interstellar science fiction separation cosmic longing"},
+    {"all_terms": ["big scale", "personal"], "append": "epic science fiction intimate personal human stakes family emotional spectacle"},
+    {"all_terms": ["prison", "hopeful"], "append": "prison friendship redemption hope freedom perseverance"},
+    {"terms": ["not supposed to", "forbidden"], "append": "forbidden romance secret relationship impossible love"},
+    {"terms": ["breaks your heart", "heart at the end"], "append": "tragic romance heartbreaking bittersweet ending grief love"}
+  ],
+  "structured_genres": {
+    "musical": ["music", "musical"],
+    "documentary": ["documentary"]
+  }
+}

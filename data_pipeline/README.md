@@ -65,3 +65,23 @@ Run a single ad-hoc query with:
 ```powershell
 .\.venv\Scripts\python.exe data_pipeline/semantic_search.py --query "a love story that feels like a long conversation" --limit 10
 ```
+
+Hybrid search uses 70% `combined_text` similarity and 30% TMDb-keyword similarity. Adjust `CONTENT_WEIGHT` and `KEYWORD_WEIGHT` at the top of `semantic_search.py`, then rerun the validation suite to compare content and hybrid scores side-by-side.
+
+## Tension-curve pipeline
+
+The curve pipeline is intentionally separate from collection/search. Add this to `.env` before subtitle collection:
+
+```env
+OPENSUBS_API_KEY=your_opensubtitles_api_key
+```
+
+Then run the stages in order:
+
+```powershell
+.\.venv\Scripts\python.exe data_pipeline/train_tone_classifier.py
+.\.venv\Scripts\python.exe data_pipeline/download_flagship_subtitles.py
+.\.venv\Scripts\python.exe data_pipeline/build_tension_curves.py
+```
+
+`flagship_movies.py` defines the 15 subtitle-backed titles. `tension_curves.json` labels each curve with `is_approximate`: `false` for successful subtitle-derived curves and `true` for review-text estimates (including any flagship whose subtitle could not be retrieved).
