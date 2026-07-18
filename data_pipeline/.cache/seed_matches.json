@@ -1,0 +1,551 @@
+{
+  "La La Land|2016": {
+    "adult": false,
+    "backdrop_path": "/nlPCdZlHtRNcF6C9hzUH4ebmV1w.jpg",
+    "genre_ids": [
+      35,
+      18,
+      10749
+    ],
+    "id": 313369,
+    "title": "La La Land",
+    "original_language": "en",
+    "original_title": "La La Land",
+    "overview": "Mia, an aspiring actress, serves lattes to movie stars in between auditions and Sebastian, a jazz musician, scrapes by playing cocktail party gigs in dingy bars, but as success mounts they are faced with decisions that begin to fray the fragile fabric of their love affair, and the dreams they worked so hard to maintain in each other threaten to rip them apart.",
+    "popularity": 13.7385,
+    "poster_path": "/uDO8zWDhfWwoFdKS4fzkUJt0Rf0.jpg",
+    "release_date": "2016-12-01",
+    "softcore": false,
+    "video": false,
+    "vote_average": 7.9,
+    "vote_count": 18219
+  },
+  "Notting Hill|1999": {
+    "adult": false,
+    "backdrop_path": "/enTZhfxAdgOCdFdbj52MR3F10yC.jpg",
+    "genre_ids": [
+      10749,
+      35
+    ],
+    "id": 509,
+    "title": "Notting Hill",
+    "original_language": "en",
+    "original_title": "Notting Hill",
+    "overview": "London bookstore owner William Thacker's quiet life turns upside down when a chance encounter with famous actress Anna Scott sparks an unlikely romance challenged by their vastly different worlds.",
+    "popularity": 6.1832,
+    "poster_path": "/hHRIf2XHeQMbyRb3HUx19SF5Ujw.jpg",
+    "release_date": "1999-05-21",
+    "softcore": false,
+    "video": false,
+    "vote_average": 7.266,
+    "vote_count": 6772
+  },
+  "How to Lose a Guy in 10 Days|2003": {
+    "adult": false,
+    "backdrop_path": "/cdYj6HFpKp5NTmLiHHbNEGSmDT4.jpg",
+    "genre_ids": [
+      35,
+      10749
+    ],
+    "id": 9919,
+    "title": "How to Lose a Guy in 10 Days",
+    "original_language": "en",
+    "original_title": "How to Lose a Guy in 10 Days",
+    "overview": "It's the battle of wills, as Andie needs to prove she can dump a guy in 10 days, whereas Ben needs to prove he can win a girl in 10 days. Now, the clock is ticking—and the wildly entertaining comedy smash is off and running in this irresistible tale of sex, lies and outrageous romantic fireworks!",
+    "popularity": 6.7192,
+    "poster_path": "/2dlftyPz7mTYbrsPvTogyFmYd7d.jpg",
+    "release_date": "2003-02-07",
+    "softcore": false,
+    "video": false,
+    "vote_average": 6.9,
+    "vote_count": 4520
+  },
+  "Through My Window|2022": {
+    "adult": false,
+    "backdrop_path": "/4rsomWxlqnHt3muGYK06auhOib6.jpg",
+    "genre_ids": [
+      10749,
+      18,
+      35
+    ],
+    "id": 818647,
+    "title": "Through My Window",
+    "original_language": "es",
+    "original_title": "A través de mi ventana",
+    "overview": "Raquel's longtime crush on her next-door neighbor turns into something more when he starts developing feelings for her, despite his family's objections.",
+    "popularity": 7.8412,
+    "poster_path": "/jmkpZvMVIRrMFevxzOubSBfG0s0.jpg",
+    "release_date": "2022-02-04",
+    "softcore": false,
+    "video": false,
+    "vote_average": 7.353,
+    "vote_count": 3355
+  },
+  "Interstellar|2014": {
+    "adult": false,
+    "backdrop_path": "/2ssWTSVklAEc98frZUQhgtGHx7s.jpg",
+    "genre_ids": [
+      12,
+      18,
+      878
+    ],
+    "id": 157336,
+    "title": "Interstellar",
+    "original_language": "en",
+    "original_title": "Interstellar",
+    "overview": "The adventures of a group of explorers who make use of a newly discovered wormhole to surpass the limitations on human space travel and conquer the vast distances involved in an interstellar voyage.",
+    "popularity": 54.2928,
+    "poster_path": "/yQvGrMoipbRoddT0ZR8tPoR7NfX.jpg",
+    "release_date": "2014-11-05",
+    "softcore": false,
+    "video": false,
+    "vote_average": 8.482,
+    "vote_count": 40327
+  },
+  "Inception|2010": {
+    "adult": false,
+    "backdrop_path": "/8ZTVqvKDQ8emSGUEMjsS4yHAwrp.jpg",
+    "genre_ids": [
+      28,
+      878,
+      12
+    ],
+    "id": 27205,
+    "title": "Inception",
+    "original_language": "en",
+    "original_title": "Inception",
+    "overview": "Cobb, a skilled thief who commits corporate espionage by infiltrating the subconscious of his targets is offered a chance to regain his old life as payment for a task considered to be impossible: \"inception\", the implantation of another person's idea into a target's subconscious.",
+    "popularity": 44.1872,
+    "poster_path": "/xlaY2zyzMfkhk0HSC5VUwzoZPU1.jpg",
+    "release_date": "2010-07-15",
+    "softcore": false,
+    "video": false,
+    "vote_average": 8.373,
+    "vote_count": 39569
+  },
+  "The Shawshank Redemption|1994": {
+    "adult": false,
+    "backdrop_path": "/zfbjgQE1uSd9wiPTX4VzsLi0rGG.jpg",
+    "genre_ids": [
+      18,
+      80
+    ],
+    "id": 278,
+    "title": "The Shawshank Redemption",
+    "original_language": "en",
+    "original_title": "The Shawshank Redemption",
+    "overview": "Imprisoned in the 1940s for the double murder of his wife and her lover, upstanding banker Andy Dufresne begins a new life at the Shawshank prison, where he puts his accounting skills to work for an amoral warden. During his long stretch in prison, Dufresne comes to be admired by the other inmates -- including an older prisoner named Red -- for his integrity and unquenchable sense of hope.",
+    "popularity": 93.7562,
+    "poster_path": "/9cqNxx0GxF0bflZmeSMuL5tnGzr.jpg",
+    "release_date": "1994-09-23",
+    "softcore": false,
+    "video": false,
+    "vote_average": 8.726,
+    "vote_count": 30785
+  },
+  "Manchester by the Sea|2016": {
+    "adult": false,
+    "backdrop_path": "/fjk4eE8Ypke4YLv5A3ArDH4GzYH.jpg",
+    "genre_ids": [
+      18
+    ],
+    "id": 334541,
+    "title": "Manchester by the Sea",
+    "original_language": "en",
+    "original_title": "Manchester by the Sea",
+    "overview": "After his older brother passes away, Lee Chandler is forced to return home to care for his 16-year-old nephew. There he is compelled to deal with a tragic past that separated him from his family and the community where he was born and raised.",
+    "popularity": 5.9329,
+    "poster_path": "/o9VXYOuaJxCEKOxbA86xqtwmqYn.jpg",
+    "release_date": "2016-11-17",
+    "softcore": false,
+    "video": false,
+    "vote_average": 7.553,
+    "vote_count": 6453
+  },
+  "Purple Hearts|2022": {
+    "adult": false,
+    "backdrop_path": "/jdZM1Gs6DtRGvosgqaXRrIkvYX7.jpg",
+    "genre_ids": [
+      10749,
+      18
+    ],
+    "id": 762975,
+    "title": "Purple Hearts",
+    "original_language": "en",
+    "original_title": "Purple Hearts",
+    "overview": "An aspiring musician agrees to a marriage of convenience with a soon-to-deploy Marine, but a tragedy soon turns their fake relationship all too real.",
+    "popularity": 8.0156,
+    "poster_path": "/4JyNWkryifWbWXJyxcWh3pVya6N.jpg",
+    "release_date": "2022-07-29",
+    "softcore": false,
+    "video": false,
+    "vote_average": 8.043,
+    "vote_count": 2901
+  },
+  "Five Feet Apart|2019": {
+    "adult": false,
+    "backdrop_path": "/cYdHaKx6Ihj1BIvbxpCxIGXfZ02.jpg",
+    "genre_ids": [
+      10749,
+      18
+    ],
+    "id": 527641,
+    "title": "Five Feet Apart",
+    "original_language": "en",
+    "original_title": "Five Feet Apart",
+    "overview": "Seventeen-year-old Stella spends most of her time in the hospital as a cystic fibrosis patient. Her life is full of routines, boundaries and self-control — all of which get put to the test when she meets Will, an impossibly charming teen who has the same illness. There's an instant flirtation, though restrictions dictate that they must maintain a safe distance between them. As their connection intensifies, so does the temptation to throw the rules out the window and embrace that attraction.",
+    "popularity": 4.4919,
+    "poster_path": "/kreTuJBkUjVWePRfhHZuYfhNE1T.jpg",
+    "release_date": "2019-03-14",
+    "softcore": false,
+    "video": false,
+    "vote_average": 8.2,
+    "vote_count": 5948
+  },
+  "Before Sunrise|1995": {
+    "adult": false,
+    "backdrop_path": "/qA2TyqPldTtoTVY3LKrNIG5g6bH.jpg",
+    "genre_ids": [
+      18,
+      10749
+    ],
+    "id": 76,
+    "title": "Before Sunrise",
+    "original_language": "en",
+    "original_title": "Before Sunrise",
+    "overview": "An unexpected meeting on a train leads two travelers to spend an evening wandering through Vienna. As the night unfolds, they share stories and conversations about life and love, exploring new ideas while a quiet intimacy grows between them, knowing it may be their only night together.",
+    "popularity": 7.1078,
+    "poster_path": "/kf1Jb1c2JAOqjuzA3H4oDM263uB.jpg",
+    "release_date": "1995-01-27",
+    "softcore": false,
+    "video": false,
+    "vote_average": 8.0,
+    "vote_count": 4744
+  },
+  "Before Sunset|2004": {
+    "adult": false,
+    "backdrop_path": "/tcZi0LQc5iu2u6i5aOWyj9NBBvl.jpg",
+    "genre_ids": [
+      18,
+      10749
+    ],
+    "id": 80,
+    "title": "Before Sunset",
+    "original_language": "en",
+    "original_title": "Before Sunset",
+    "overview": "Nine years later, Jesse travels across Europe giving readings from a book he wrote about the night he spent in Vienna with Celine. After his reading in Paris, Celine finds him, and they spend part of the day together before Jesse has to again leave for a flight. They are both in relationships now, and Jesse has a son, but as their strong feelings for each other start to return, both confess a longing for more.",
+    "popularity": 3.9275,
+    "poster_path": "/4sW5XH9ZfYXpvFzev00S1IGAEbg.jpg",
+    "release_date": "2004-06-16",
+    "softcore": false,
+    "video": false,
+    "vote_average": 7.803,
+    "vote_count": 3833
+  },
+  "Before Midnight|2013": {
+    "adult": false,
+    "backdrop_path": "/crdW75sDNYM0ddjFyrcg6V59qdP.jpg",
+    "genre_ids": [
+      10749,
+      18
+    ],
+    "id": 132344,
+    "title": "Before Midnight",
+    "original_language": "en",
+    "original_title": "Before Midnight",
+    "overview": "It has been nine years since we last met Jesse and Celine, the French-American couple who once met on a train in Vienna. They now live in Paris with twin daughters but have spent a summer in Greece at the invitation of an author colleague of Jesse's. When the vacation is over and Jesse must send his teenage son off to the States, he begins to question his life decisions, and his relationship with Celine is at risk.",
+    "popularity": 3.8982,
+    "poster_path": "/qbGKJmNUroDz75kh5Oafoall89e.jpg",
+    "release_date": "2013-04-05",
+    "softcore": false,
+    "video": false,
+    "vote_average": 7.49,
+    "vote_count": 2732
+  },
+  "After|2019": {
+    "adult": false,
+    "backdrop_path": "/997ToEZvF2Obp9zNZbY5ELVnmrW.jpg",
+    "genre_ids": [
+      18,
+      10749
+    ],
+    "id": 537915,
+    "title": "After",
+    "original_language": "en",
+    "original_title": "After",
+    "overview": "Tessa Young is a dedicated student, dutiful daughter and loyal girlfriend to her high school sweetheart. Entering her first semester of college, Tessa's guarded world opens up when she meets Hardin Scott, a mysterious and brooding rebel who makes her question all she thought she knew about herself -- and what she wants out of life.",
+    "popularity": 10.4906,
+    "poster_path": "/u3B2YKUjWABcxXZ6Nm9h10hLUbh.jpg",
+    "release_date": "2019-04-11",
+    "softcore": false,
+    "video": false,
+    "vote_average": 7.105,
+    "vote_count": 8540
+  },
+  "After We Collided|2020": {
+    "adult": false,
+    "backdrop_path": "/6hgItrYQEG33y0I7yP2SRl2ei4w.jpg",
+    "genre_ids": [
+      18,
+      10749
+    ],
+    "id": 613504,
+    "title": "After We Collided",
+    "original_language": "en",
+    "original_title": "After We Collided",
+    "overview": "Tessa finds herself struggling with her complicated relationship with Hardin; she faces a dilemma that could change their lives forever.",
+    "popularity": 5.8834,
+    "poster_path": "/kiX7UYfOpYrMFSAGbI6j1pFkLzQ.jpg",
+    "release_date": "2020-09-02",
+    "softcore": false,
+    "video": false,
+    "vote_average": 7.15,
+    "vote_count": 5480
+  },
+  "After We Fell|2021": {
+    "adult": false,
+    "backdrop_path": "/mxdiaM2tsx8M6W3zLgiPwAkhQfq.jpg",
+    "genre_ids": [
+      18,
+      10749
+    ],
+    "id": 744275,
+    "title": "After We Fell",
+    "original_language": "en",
+    "original_title": "After We Fell",
+    "overview": "Just as Tessa's life begins to become unglued, nothing is what she thought it would be. Not her friends nor her family. The only person that she should be able to rely on is Hardin, who is furious when he discovers the massive secret that she's been keeping. Before Tessa makes the biggest decision of her life, everything changes because of revelations about her family.",
+    "popularity": 25.3225,
+    "poster_path": "/dU4HfnTEJDf9KvxGS9hgO7BVeju.jpg",
+    "release_date": "2021-09-01",
+    "softcore": false,
+    "video": false,
+    "vote_average": 7.005,
+    "vote_count": 2754
+  },
+  "After Ever Happy|2022": {
+    "adult": false,
+    "backdrop_path": "/rwgmDkIEv8VjAsWx25ottJrFvpO.jpg",
+    "genre_ids": [
+      10749,
+      18
+    ],
+    "id": 744276,
+    "title": "After Ever Happy",
+    "original_language": "en",
+    "original_title": "After Ever Happy",
+    "overview": "As a shocking truth about a couple's families emerges, the two lovers discover they are not so different from each other. Tessa is no longer the sweet, simple, good girl she was when she met Hardin — any more than he is the cruel, moody boy she fell so hard for.",
+    "popularity": 5.5481,
+    "poster_path": "/moogpu8rNkEjTgFyLXwhPghft5w.jpg",
+    "release_date": "2022-08-24",
+    "softcore": false,
+    "video": false,
+    "vote_average": 6.778,
+    "vote_count": 1378
+  },
+  "anchor|Ocean's Eleven|2001": {
+    "adult": false,
+    "backdrop_path": "/ncoqdHs1poUaBqyKic9YI8ai7MP.jpg",
+    "genre_ids": [
+      53,
+      80
+    ],
+    "id": 161,
+    "title": "Ocean's Eleven",
+    "original_language": "en",
+    "original_title": "Ocean's Eleven",
+    "overview": "Less than 24 hours into his parole, charismatic thief Danny Ocean is already rolling out his next plan: In one night, Danny's hand-picked crew of specialists will attempt to steal more than $150 million from three Las Vegas casinos. But to score the cash, Danny risks his chances of reconciling with ex-wife, Tess.",
+    "popularity": 10.8808,
+    "poster_path": "/hQQCdZrsHtZyR6NbKH2YyCqd2fR.jpg",
+    "release_date": "2001-12-07",
+    "softcore": false,
+    "video": false,
+    "vote_average": 7.463,
+    "vote_count": 12668
+  },
+  "anchor|Baby Driver|2017": {
+    "adult": false,
+    "backdrop_path": "/yir5430WblZSZuIMd9C6pIZerfA.jpg",
+    "genre_ids": [
+      28,
+      80
+    ],
+    "id": 339403,
+    "title": "Baby Driver",
+    "original_language": "en",
+    "original_title": "Baby Driver",
+    "overview": "After being coerced into working for a crime boss, a young getaway driver finds himself taking part in a heist doomed to fail.",
+    "popularity": 8.4506,
+    "poster_path": "/tYzFuYXmT8LOYASlFCkaPiAFAl0.jpg",
+    "release_date": "2017-06-28",
+    "softcore": false,
+    "video": false,
+    "vote_average": 7.443,
+    "vote_count": 16944
+  },
+  "anchor|Logan Lucky|2017": {
+    "adult": false,
+    "backdrop_path": "/eszmHIWJHAKdnJcE3KcvVzOb6Jd.jpg",
+    "genre_ids": [
+      35,
+      80,
+      28,
+      18
+    ],
+    "id": 399170,
+    "title": "Logan Lucky",
+    "original_language": "en",
+    "original_title": "Logan Lucky",
+    "overview": "Trying to reverse a family curse, brothers Jimmy and Clyde Logan set out to execute an elaborate robbery during the legendary Coca-Cola 600 race at the Charlotte Motor Speedway.",
+    "popularity": 4.6304,
+    "poster_path": "/mQrhrBaaHvRfBQq0Px3HtVbH9iE.jpg",
+    "release_date": "2017-08-17",
+    "softcore": false,
+    "video": false,
+    "vote_average": 6.739,
+    "vote_count": 3876
+  },
+  "anchor|Knives Out|2019": {
+    "adult": false,
+    "backdrop_path": "/4HWAQu28e2yaWrtupFPGFkdNU7V.jpg",
+    "genre_ids": [
+      35,
+      80,
+      9648
+    ],
+    "id": 546554,
+    "title": "Knives Out",
+    "original_language": "en",
+    "original_title": "Knives Out",
+    "overview": "When renowned crime novelist Harlan Thrombey is found dead at his estate just after his 85th birthday, the inquisitive and debonair Detective Benoit Blanc is mysteriously enlisted to investigate. From Harlan's dysfunctional family to his devoted staff, Blanc sifts through a web of red herrings and self-serving lies to uncover the truth behind Harlan's untimely death.",
+    "popularity": 11.63,
+    "poster_path": "/pThyQovXQrw2m0s9x82twj48Jq4.jpg",
+    "release_date": "2019-11-27",
+    "softcore": false,
+    "video": false,
+    "vote_average": 7.84,
+    "vote_count": 14176
+  },
+  "anchor|The Dark Knight|2008": {
+    "adult": false,
+    "backdrop_path": "/dqK9Hag1054tghRQSqLSfrkvQnA.jpg",
+    "genre_ids": [
+      28,
+      80,
+      53
+    ],
+    "id": 155,
+    "title": "The Dark Knight",
+    "original_language": "en",
+    "original_title": "The Dark Knight",
+    "overview": "Batman raises the stakes in his war on crime. With the help of Lt. Jim Gordon and District Attorney Harvey Dent, Batman sets out to dismantle the remaining criminal organizations that plague the streets. The partnership proves to be effective, but they soon find themselves prey to a reign of chaos unleashed by a rising criminal mastermind known to the terrified citizens of Gotham as the Joker.",
+    "popularity": 36.2717,
+    "poster_path": "/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
+    "release_date": "2008-07-16",
+    "softcore": false,
+    "video": false,
+    "vote_average": 8.533,
+    "vote_count": 36119
+  },
+  "anchor|Prisoners|2013": {
+    "adult": false,
+    "backdrop_path": "/yKsMvfVx8vrvAM6NQSTEX0rBmMK.jpg",
+    "genre_ids": [
+      18,
+      53,
+      80
+    ],
+    "id": 146233,
+    "title": "Prisoners",
+    "original_language": "en",
+    "original_title": "Prisoners",
+    "overview": "After his six-year-old daughter is abducted, a desperate father takes justice into his own hands when he loses faith in the detective leading the investigation, setting both men on a collision course as the search descends into obsession and moral compromise.",
+    "popularity": 11.2812,
+    "poster_path": "/uhviyknTT5cEQXbn6vWIqfM4vGm.jpg",
+    "release_date": "2013-09-19",
+    "softcore": false,
+    "video": false,
+    "vote_average": 8.106,
+    "vote_count": 13218
+  },
+  "anchor|The Pursuit of Happyness|2006": {
+    "adult": false,
+    "backdrop_path": "/5jhG1lTgV0MS6tDkBMQSSitttTT.jpg",
+    "genre_ids": [
+      18
+    ],
+    "id": 1402,
+    "title": "The Pursuit of Happyness",
+    "original_language": "en",
+    "original_title": "The Pursuit of Happyness",
+    "overview": "A struggling salesman takes custody of his son as he's poised to begin a life-changing professional career.",
+    "popularity": 12.4846,
+    "poster_path": "/lBYOKAMcxIvuk9s9hMuecB9dPBV.jpg",
+    "release_date": "2006-12-14",
+    "softcore": false,
+    "video": false,
+    "vote_average": 7.887,
+    "vote_count": 10681
+  },
+  "anchor|Spirited Away|2001": {
+    "adult": false,
+    "backdrop_path": "/dyJvKsNs2KP8qQnAXbRwDjblViy.jpg",
+    "genre_ids": [
+      16,
+      10751,
+      14
+    ],
+    "id": 129,
+    "title": "Spirited Away",
+    "original_language": "ja",
+    "original_title": "千と千尋の神隠し",
+    "overview": "A young girl, Chihiro, becomes trapped in a strange new world of spirits. When her parents undergo a mysterious transformation, she must call upon the courage she never knew she had to free her family.",
+    "popularity": 28.7732,
+    "poster_path": "/39wmItIWsg5sZMyRUHLkWBcuVCM.jpg",
+    "release_date": "2001-07-20",
+    "softcore": false,
+    "video": false,
+    "vote_average": 8.5,
+    "vote_count": 18542
+  },
+  "anchor|Mad Max: Fury Road|2015": {
+    "adult": false,
+    "backdrop_path": "/uT895WNwm0aIJRtGizcQhrejWUo.jpg",
+    "genre_ids": [
+      28,
+      12,
+      878
+    ],
+    "id": 76341,
+    "title": "Mad Max: Fury Road",
+    "original_language": "en",
+    "original_title": "Mad Max: Fury Road",
+    "overview": "An apocalyptic story set in the furthest reaches of our planet, in a stark desert landscape where humanity is broken, and most everyone is crazed fighting for the necessities of life. Within this world exist two rebels on the run who just might be able to restore order.",
+    "popularity": 17.8155,
+    "poster_path": "/hA2ple9q4qnwxp3hKVNhroipsir.jpg",
+    "release_date": "2015-05-13",
+    "softcore": false,
+    "video": false,
+    "vote_average": 7.635,
+    "vote_count": 24245
+  },
+  "anchor|The Grand Budapest Hotel|2014": {
+    "adult": false,
+    "backdrop_path": "/9udCLTxTFl28RxnK8Q05E154ZGa.jpg",
+    "genre_ids": [
+      35,
+      18
+    ],
+    "id": 120467,
+    "title": "The Grand Budapest Hotel",
+    "original_language": "en",
+    "original_title": "The Grand Budapest Hotel",
+    "overview": "The Grand Budapest Hotel tells of a legendary concierge at a famous European hotel between the wars and his friendship with a young employee who becomes his trusted protégé. The story involves the theft and recovery of a priceless Renaissance painting, the battle for an enormous family fortune and the slow and then sudden upheavals that transformed Europe during the first half of the 20th century.",
+    "popularity": 11.7279,
+    "poster_path": "/zOVCqKUzjFKqa1eDMcOzvXwthY4.jpg",
+    "release_date": "2014-02-26",
+    "softcore": false,
+    "video": false,
+    "vote_average": 8.027,
+    "vote_count": 16222
+  }
+}
