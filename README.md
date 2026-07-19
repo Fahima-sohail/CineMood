@@ -155,17 +155,7 @@ node data_pipeline/verify_frontend_search.mjs
 
 The embedding parity check confirms that Python SentenceTransformers and fp32 Transformers.js emit matching normalized vectors for the same text.
 
-## Deploy to GitHub Pages
 
-This repository includes a GitHub Actions deployment workflow at [`.github/workflows/deploy-pages.yml`](.github/workflows/deploy-pages.yml).
-
-1. Push the project to the `main` branch.
-2. On GitHub, open **Settings → Pages**.
-3. Under **Build and deployment**, select **GitHub Actions** as the source.
-4. Open the **Actions** tab and wait for **Deploy CineMood to GitHub Pages** to complete.
-5. Visit **https://fahima-sohail.github.io/CineMood/**.
-
-Every later push to `main` builds and deploys automatically. The workflow supplies Vite with the `/CineMood/` base path, so assets and static data resolve correctly on a GitHub project site.
 
 ## Project structure
 
